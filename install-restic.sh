@@ -38,3 +38,6 @@ backends:
 EOF
 
 echo "Restic is installed! Please edit file ~/.autorestic.yml to configure backups"
+echo "Then run `autorestic check` to check backup"
+echo "And add `autorestic backup -a` to cron: `crontab -e`"
+echo "Example: `0 0 * * * autorestic backup -a`"
