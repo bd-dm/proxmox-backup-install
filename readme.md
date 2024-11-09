@@ -17,5 +17,5 @@ And add this to `crontab -e`:
 
 To restore, run:
 ```bash
-autorestic restore -l local --from remote --to /
+autorestic restore -l local --from remote --to ./restore
 ```
