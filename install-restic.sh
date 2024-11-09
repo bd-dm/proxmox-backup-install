@@ -7,19 +7,9 @@ cat << 'EOF' > ~/.autorestic.yml
 version: 2
  
 locations:
-  home:
-    from: /home
-    # Or multiple
-    # from:
-    #  - /foo
-    #  - /bar
+  local:
+    from: /path/to/folder
     to: remote
- 
-  important:
-    from: /path/to/important/stuff
-    to:
-      - remote
-      - hdd
  
 backends:
   remote:
@@ -28,11 +18,6 @@ backends:
     env:
       B2_ACCOUNT_ID: account_id
       B2_ACCOUNT_KEY: account_key
- 
-  hdd:
-    type: local
-    path: /mnt/my_external_storage
-    key: 'if not key is set it will be generated for you'
 
 EOF
 
