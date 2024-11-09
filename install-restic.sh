@@ -23,12 +23,11 @@ locations:
  
 backends:
   remote:
-    type: s3
-    path: 's3.amazonaws.com/bucket_name'
-    key: some-random-password-198rc79r8y1029c8yfewj8f1u0ef87yh198uoieufy
+    type: b2
+    path: 'myBucket:backup/home'
     env:
-      AWS_ACCESS_KEY_ID: account_id
-      AWS_SECRET_ACCESS_KEY: account_key
+      B2_ACCOUNT_ID: account_id
+      B2_ACCOUNT_KEY: account_key
  
   hdd:
     type: local
